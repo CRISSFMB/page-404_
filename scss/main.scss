@@ -1,0 +1,95 @@
+.tittle-text {
+    margin-left: 1rem;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .image {
+        .scare {
+            width: 300px;
+            padding-top: 1rem;
+        }
+    }
+    .text-hero {
+        margin-top: 2rem;
+        &__tittle {
+            font-weight: bold;
+            font-size: 1.8rem;
+            margin-bottom: 2.3rem;
+        }
+        &__info {
+            font-weight: lighter;
+            color: $green;
+            line-height: 1.5;
+            letter-spacing: 1.7px;
+            margin-bottom: 3rem;
+        }
+        .button {
+            background-color: rgb(26, 22, 22);
+            padding: 1.5rem 3rem;
+            border: none;
+            a {
+                color: $white;
+                text-decoration: none;
+                font-size: .6rem;
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+@include desktop {
+    .container {
+        margin: auto auto;
+    }
+    html {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            .tittle-text {
+                margin-left: 3rem;
+            }
+            .container {
+                width: 100%;
+                .hero {
+                    flex-direction: row;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    .image {
+                        flex: 0 0 calc(50%);
+                        .scare {
+                            width: 400px;
+                            display: block;
+                            margin: 0 auto;
+                            padding: 0;
+                        }
+                    }
+                    .text-hero {
+                        margin-top: 0;
+                        width: 400px;
+                        margin-right: 7rem;
+                        &__tittle {
+                            font-size: 2.3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
